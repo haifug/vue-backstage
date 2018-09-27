@@ -1,7 +1,6 @@
 <template>
 	
 	<div class="home content">
-		{{msg}}--{{id}}
     <div>
       <el-button>默认按钮</el-button>
       <el-button type="primary">主要按钮</el-button>
@@ -17,12 +16,11 @@
 	export default{
 		data(){
 			return{
-				msg:"首页",
-				id:""
+				msg:"首页"
 			}
 		},
 		mounted(){
-			this.id = "菜单id:"+this.$route.params.id;
+
 		}
 	}
 </script>

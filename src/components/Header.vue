@@ -1,15 +1,18 @@
 <template>
-	<div class="header">
-		<div class="header-logo">
-			logo
-		</div>
-		<div class="header-uav">
+
+
+		<div class="header">
+
+      <div class="header-logo">
+        logo
+      </div>
+
 			<el-menu
 			  :default-active="activeIndex2"
-			  class=""
+			  class="header-uav"
 			  mode="horizontal"
 			  @select="handleSelect"
-			  background-color="#545c64"
+			  background-color="#1A3654"
 			  text-color="#fff"
 			  active-text-color="#ffd04b">
 			  <el-menu-item index="1">消息中心</el-menu-item>
@@ -19,7 +22,7 @@
 			  </el-submenu>
 			</el-menu>
 		</div>
-	</div>
+
 </template>
 
 <script>
@@ -98,15 +101,8 @@
 	.header .header-uav{
 		position: absolute;
 		top: 0;
-		left: 200px;
-		width: calc(100% - 200px);
+		right: 0;
 		height: 100%;
 		line-height: 60px;
-		//background-color:#545c64;
-	}
-	.header .header-uav>ul{
-		position: absolute;
-		top: 0;
-		right: 20px;
 	}
 </style>
