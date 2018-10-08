@@ -13,8 +13,7 @@
 			}
 		},
 		mounted(){
-			this.id = "菜单id:"+this.$route.params.id;
-			console.log(this.$route.params);
+      this.id = this.$store.state.menuId;
 		}
 	}
 </script>

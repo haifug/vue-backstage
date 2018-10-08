@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import store from  "../vuex/store.js";
 	export default{
 		data(){
 			return{
@@ -12,8 +13,9 @@
 				id:''
 			}
 		},
+    store,
 		mounted(){
-			this.id = "菜单id:"+this.$route.params.id;
+			this.id = this.$store.state.menuId;
 			console.log(this.$route.params);
 		}
 	}

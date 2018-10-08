@@ -33,17 +33,17 @@ export default new Router({
       component: Home
     },
     {
-      path: '/user/:id',
+      path: '/user',
       name: 'User',
       component: User
     },
     {
-      path: '/grouping/:id',
+      path: '/grouping',
       name: 'Grouping',
       component: Grouping
     },
     {
-      path: '/role/:id',
+      path: '/role',
       name: 'Role',
       component: Role
     },

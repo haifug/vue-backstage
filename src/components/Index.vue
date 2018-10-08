@@ -7,9 +7,14 @@
         <el-aside width="200px">
           <v-aside></v-aside>
         </el-aside>
-        <el-main>
-          <router-view></router-view>
-        </el-main>
+        <el-container>
+          <el-main>
+            <router-view></router-view>
+          </el-main>
+          <el-footer height="40px">
+            Copyright © gaohf_rr@163.com
+          </el-footer>
+        </el-container>
       </el-container>
     </el-container>
 </template>
@@ -39,9 +44,15 @@
   }
   .el-main {
     color: #333;
+    background-color: #ebeef5;
+  }
+  .el-footer{
+    line-height: 40px;
+    text-align: center;
   }
   body .el-container{
     width: 100%;
     height: 100%;
   }
+
 </style>

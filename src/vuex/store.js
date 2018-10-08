@@ -5,7 +5,8 @@ Vue.use(Vuex);
 
 const state = {
   login:false,
-  userData:null
+  userData:null,
+  menuId:"1"
 };
 const mutations = {
   isLogin(state,isLogin){
@@ -48,6 +49,9 @@ const mutations = {
     }else {
       state.login = false;
     }
+  },
+  setMenuId(state,payLoad){
+    state.menuId = payLoad.id;
   }
 };
 var store = new Vuex.Store({

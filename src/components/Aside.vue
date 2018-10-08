@@ -1,8 +1,9 @@
 <template>
 		<el-menu
-	      default-active="1"
+	      :default-active="activeIndex"
         :router="true"
 	      class="el-menu-vertical-demo"
+        active-text-color="#ffd04b"
 	      @open="handleOpen"
 	      @close="handleClose"
 	      @select="handleSelect">
@@ -15,13 +16,13 @@
 	          <i class="el-icon-setting"></i>
 	          <span>权限配置</span>
 	        </template>
-	        <el-menu-item index="2-1" route="/user/2-1">
+	        <el-menu-item index="2-1" route="/user">
             用户管理
 	        </el-menu-item>
-	        <el-menu-item index="2-2" route="/grouping/2-2">
+	        <el-menu-item index="2-2" route="/grouping">
             分组管理
 	        </el-menu-item>
-	        <el-menu-item index="2-3" route="/role/2-3">
+	        <el-menu-item index="2-3" route="/role">
             角色管理
 	        </el-menu-item>
 	      </el-submenu>
@@ -31,12 +32,15 @@
 </template>
 
 <script>
+  import store from  "../vuex/store.js";
 	export default{
 		data(){
 			return{
-				true:true
+				true:true,
+        activeIndex:"1"
 			}
 		},
+    store,
 		methods:{
 			handleOpen(key, keyPath) {
           console.log(key, keyPath);
@@ -46,8 +50,15 @@
       },
       handleSelect(key, keyPath) {
           console.log(key, keyPath);
+          this.$store.commit("setMenuId",{
+            id:key
+          });
+          localStorage.setItem("activeIndex",key);
       }
-		}
+		},
+    mounted(){
+		  this.activeIndex = localStorage.getItem("activeIndex");
+    }
 	}
 </script>
 
