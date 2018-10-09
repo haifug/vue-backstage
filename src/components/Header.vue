@@ -52,7 +52,7 @@
               type: 'success',
               message: '退出成功!'
             });
-
+            sessionStorage.removeItem('activeIndex');
             let userData = JSON.parse(that.$store.state.userData);
             let rememberPass = userData.rememberPass;
             if (rememberPass){

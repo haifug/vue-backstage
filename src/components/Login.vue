@@ -1,19 +1,23 @@
 <template>
-  <el-form :model="form" status-icon ref="form" :rules="rules" label-width="70px" class="login">
-    <el-form-item label="用户名" prop="name">
-      <el-input type="text" v-model="form.name" auto-complete="off" placeholder="admin"></el-input>
-    </el-form-item>
-    <el-form-item label="密码" prop="pass">
-      <el-input type="password" v-model="form.pass" auto-complete="off" placeholder="123456"></el-input>
-    </el-form-item>
-    <el-form-item label="记住密码" prop="rememberPass">
-      <el-switch v-model="form.rememberPass"></el-switch>
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm('form')">提交</el-button>
-      <el-button @click="resetForm('form')">重置</el-button>
-    </el-form-item>
-  </el-form>
+  <el-card class="login">
+    <el-form :model="form" status-icon ref="form" :rules="rules" label-width="70px" >
+
+      <el-form-item label="用户名" prop="name">
+        <el-input type="text" v-model="form.name" auto-complete="off" placeholder="admin"></el-input>
+      </el-form-item>
+      <el-form-item label="密码" prop="pass">
+        <el-input type="password" v-model="form.pass" auto-complete="off" placeholder="123456"></el-input>
+      </el-form-item>
+      <el-form-item label="记住密码" prop="rememberPass">
+        <el-switch v-model="form.rememberPass"></el-switch>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="submitForm('form')">提交</el-button>
+        <el-button @click="resetForm('form')">重置</el-button>
+      </el-form-item>
+
+    </el-form>
+  </el-card>
 </template>
 
 <script>
@@ -151,15 +155,15 @@
 <style scoped>
   .login{
     width: 270px;
-    height: 240px;
+    height: 270px;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: auto;
     border-radius: 3px;
-    box-shadow: 0px 0px 8px 2px #8c939d;
+    //box-shadow: 0px 0px 8px 2px #8c939d;
     padding: 30px 20px 20px;
   }
 </style>

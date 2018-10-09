@@ -12,7 +12,6 @@
 
 export default {
 	name: 'App',
-
   data(){
 	  return{
 
@@ -42,6 +41,10 @@ export default {
 	}
 	body .el-container{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
+  h1,h2,h3,h4,h5{
+    font-weight: 400;
+    color: #1f2f3d;
+  }
 </style>

@@ -1,27 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import App from '../App'
 import Login from '../components/Login'
-import Index from '../components/Index'
 import Home from '../components/Home'
-import User from '../components/User'
 import Grouping from '../components/Grouping'
 import Role from '../components/Role'
+import Layout from '../components/Basic/Layout'
+import Container from '../components/Basic/Container'
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    {
-      path: '/app',
-      name: 'App',
-      component: App
-    },
-    {
-      path: '/index',
-      name: 'Index',
-      component: Index
-    },
     {
       path: '/login',
       name: 'Login',
@@ -33,23 +22,23 @@ export default new Router({
       component: Home
     },
     {
-      path: '/user',
-      name: 'User',
-      component: User
+      path: '/layout',
+      name: 'Layout',
+      component: Layout
     },
     {
-      path: '/grouping',
-      name: 'Grouping',
-      component: Grouping
+      path: '/container',
+      name: 'Container',
+      component: Container
     },
     {
       path: '/role',
       name: 'Role',
       component: Role
     },
-    /*{
-      path: '*',
-     	redirect:Home
-    }*/
+    {
+      path: '/',
+     	redirect:'/home'
+    }
   ]
 })

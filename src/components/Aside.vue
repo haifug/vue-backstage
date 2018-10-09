@@ -8,22 +8,23 @@
 	      @close="handleClose"
 	      @select="handleSelect">
 	      <el-menu-item index="1" route="/home">
-	        <i class="el-icon-menu"></i>
+	        <i class="el-icon-tickets"></i>
+	        <!--<i class="iconfont icon-shouye"></i>-->
 	        <span>首页</span>
 	      </el-menu-item>
 	      <el-submenu index="2">
 	        <template slot="title">
-	          <i class="el-icon-setting"></i>
-	          <span>权限配置</span>
+	          <i class="el-icon-menu"></i>
+	          <span>基础</span>
 	        </template>
-	        <el-menu-item index="2-1" route="/user">
-            用户管理
+	        <el-menu-item index="2-1" route="/layout">
+            Layout 布局
 	        </el-menu-item>
-	        <el-menu-item index="2-2" route="/grouping">
-            分组管理
+	        <el-menu-item index="2-2" route="/container">
+            Container 布局容器
 	        </el-menu-item>
 	        <el-menu-item index="2-3" route="/role">
-            角色管理
+            Color 色彩
 	        </el-menu-item>
 	      </el-submenu>
 	      
@@ -33,6 +34,7 @@
 
 <script>
   import store from  "../vuex/store.js";
+  //import 'http://at.alicdn.com/t/font_833690_qh1kpxd35sk.css';
 	export default{
 		data(){
 			return{
@@ -53,11 +55,11 @@
           this.$store.commit("setMenuId",{
             id:key
           });
-          localStorage.setItem("activeIndex",key);
+          sessionStorage.setItem("activeIndex",key);
       }
 		},
     mounted(){
-		  this.activeIndex = localStorage.getItem("activeIndex");
+		  this.activeIndex = sessionStorage.getItem("activeIndex");
     }
 	}
 </script>
