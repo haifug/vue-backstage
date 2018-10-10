@@ -1,10 +1,10 @@
 <template>
     <div class="container">
       <h2>Container 布局容器</h2>
-      <p>
+      <p class="jf-p">
         用于布局的容器组件，方便快速搭建页面的基本结构
       </p>
-      <div class="container-href">
+      <div class="jf-href">
         参考文档地址:
         <a href="http://element-cn.eleme.io/#/zh-CN/component/container" target="_blank">http://element-cn.eleme.io/#/zh-CN/component/container</a>
       </div>
@@ -69,11 +69,7 @@
 </script>
 
 <style scoped>
-  .container-href,a{
-    margin: 10px 0;
-    font-size: 14px;
-    color: #5e6d82;
-  }
+
   .el-header, .el-footer {
     background-color: #B3C0D1;
     color: #333;

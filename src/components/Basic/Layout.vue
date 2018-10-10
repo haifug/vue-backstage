@@ -1,10 +1,10 @@
 <template>
     <div class="layout">
       <h2>Layout 布局</h2>
-      <p>
+      <p class="jf-p">
         通过基础的 24 分栏，迅速简便地创建布局。
       </p>
-      <div class="layout-href">
+      <div class="jf-href">
         参考文档地址:
         <a href="http://element-cn.eleme.io/#/zh-CN/component/layout" target="_blank">http://element-cn.eleme.io/#/zh-CN/component/layout</a>
       </div>
@@ -70,19 +70,11 @@
 </script>
 
 <style scoped>
-  p{
-    font-size: 14px;
-    color: #5e6d82;
-    line-height: 1.5em;
-  }
+
   h3{
     margin: 55px 0 20px;
   }
-  .layout-href,a{
-    margin: 10px 0;
-    font-size: 14px;
-    color: #5e6d82;
-  }
+
   .el-row {
     margin-bottom: 20px;
     &:last-child {

@@ -47,4 +47,14 @@ export default {
     font-weight: 400;
     color: #1f2f3d;
   }
+  .jf-href,.jf-href a{
+    margin: 10px 0;
+    font-size: 14px;
+    color: #5e6d82;
+  }
+  .jf-p{
+    font-size: 14px;
+    color: #5e6d82;
+    line-height: 1.5em;
+  }
 </style>

@@ -2,10 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '../components/Login'
 import Home from '../components/Home'
-import Grouping from '../components/Grouping'
-import Role from '../components/Role'
 import Layout from '../components/Basic/Layout'
 import Container from '../components/Basic/Container'
+import Button from '../components/Basic/Button'
 
 Vue.use(Router);
 
@@ -32,9 +31,9 @@ export default new Router({
       component: Container
     },
     {
-      path: '/role',
-      name: 'Role',
-      component: Role
+      path: '/button',
+      name: 'Button',
+      component: Button
     },
     {
       path: '/',

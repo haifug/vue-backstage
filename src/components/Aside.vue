@@ -23,8 +23,8 @@
 	        <el-menu-item index="2-2" route="/container">
             Container 布局容器
 	        </el-menu-item>
-	        <el-menu-item index="2-3" route="/role">
-            Color 色彩
+	        <el-menu-item index="2-3" route="/button">
+            Button 按钮
 	        </el-menu-item>
 	      </el-submenu>
 	      
